@@ -14,7 +14,7 @@ from knn import knn_classifier
 from naiveBayes import nb_classifier
 from random_forest import rf_classifier
 from XGB import xgb_classifier
-from classification import preprocess_data
+from featuresp import data_process
 
 st.set_page_config(page_title="ML Model Evaluation App", layout="wide")
 st.title("🤖 Machine Learning Model Dashboard")
@@ -70,7 +70,7 @@ if uploaded_file is not None:
     #)
 
     #Making dynamic feture engineering
-    X, y, target_column = preprocess_data(df, target_column=None)
+    X, y, target_column = data_process(df, target_column=None)
     
     # --------------------------------------------------
     # (b) Model selection dropdown
