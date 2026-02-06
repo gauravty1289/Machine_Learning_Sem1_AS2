@@ -31,7 +31,13 @@ uploaded_file = st.file_uploader(
     "📂 Upload Test Dataset (CSV)",
     type=["csv"]
 )
-model_name = st.selectbox(
+result = None
+if uploaded_file is not None:
+    df = pd.read_csv(uploaded_file)
+    st.success("Dataset uploaded successfully!")
+    st.subheader("🔍 Dataset Preview")
+    st.dataframe(df.head(), use_container_width=True)
+    model_name = st.selectbox(
     "Select Classification Model",
     [
         "Select the Model",
@@ -42,13 +48,7 @@ model_name = st.selectbox(
         "Random Forest",
         "XGB Classifier"
     ]
-)
-result = None
-if uploaded_file is not None:
-    df = pd.read_csv(uploaded_file)
-    st.success("Dataset uploaded successfully!")
-    st.subheader("🔍 Dataset Preview")
-    st.dataframe(df.head(), use_container_width=True)
+    )
     ## --------------------------------------------------
     ## Assume last column is target
     ## --------------------------------------------------
