@@ -20,21 +20,22 @@ b) **Data set Overview** This dataset contains information on default payments, 
 
 
 **d. Observations on the performance of each model**
-Logistic Regression:
+
+**Logistic Regression:**
 The Logistic Regression model achieves an accuracy of 0.58, which is the lowest among all models. It shows a high recall of 0.74, indicating that most positive instances are correctly identified. However, the precision is very low (0.31), resulting in a high number of false positives. The F1-score of 0.44 reflects poor balance between precision and recall. The low MCC (0.23) suggests weak overall classification quality and limited reliability.
-________________________________________
-Decision Tree:
+
+**Decision Tree:**
 The Decision Tree model records an accuracy of 0.74, showing moderate predictive performance. Its AUC value of 0.61 is the lowest, indicating poor ability to distinguish between classes. Precision (0.40) and recall (0.39) are nearly equal, suggesting balanced but weak predictions. The F1-score (0.39) confirms limited effectiveness. The MCC of 0.23 indicates minimal improvement over random classification.
-________________________________________
-k-Nearest Neighbors (kNN):
+
+**k-Nearest Neighbors (kNN):**
 The kNN model achieves a high accuracy of 0.81, indicating strong overall performance. It also records a good AUC of 0.75, showing effective class separation. Precision is relatively high (0.62), meaning predicted positives are often correct. However, recall is low (0.40), indicating many positive cases are missed. The F1-score (0.48) and MCC (0.39) suggest moderate classification balance.
-________________________________________
-Naive Bayes:
+
+**Naive Bayes:**
 Naive Bayes attains an accuracy of 0.72, indicating stable performance. It shows a high recall of 0.68, effectively identifying positive instances. Precision (0.41) is moderate, leading to some false positives. The F1-score of 0.51 reflects better balance compared to Logistic Regression and Decision Tree. The MCC (0.35) indicates reasonable overall predictive reliability.
-________________________________________
-Random Forest (Ensemble):
+
+**Random Forest (Ensemble):**
 The Random Forest model achieves a high accuracy of 0.82, demonstrating strong predictive capability. Its AUC of 0.78 indicates good class discrimination. Precision (0.60) and recall (0.48) show balanced ensemble performance. The F1-score (0.54) is among the highest, reflecting effective learning. A higher MCC (0.43) confirms improved robustness and reliability.
-________________________________________
-XGBoost (Ensemble):
+
+**XGBoost (Ensemble):**
 XGBoost records the highest accuracy of 0.83, making it the best-performing model. It also achieves the highest AUC (0.79), indicating excellent class separation. Precision is high (0.68), reducing false positives significantly. Although recall (0.42) is moderate, overall balance is strong. The highest MCC (0.44) confirms superior and consistent predictive performance.
 
