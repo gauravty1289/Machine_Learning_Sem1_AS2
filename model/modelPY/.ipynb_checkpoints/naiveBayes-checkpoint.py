@@ -15,7 +15,6 @@ from sklearn.metrics import (
     f1_score,
     matthews_corrcoef
 )
-from featuresp import data_process
 
 def nb_classifier(X,y):
     
